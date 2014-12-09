@@ -1,11 +1,11 @@
 'use strict';
 
-angular.module('app', [])
-    .directive('slideToggle', function() {
+angular.module('fng.pure.angularjs.accordion', [])
+    .directive('sliderToggle', function() {
         return {
             restrict: 'AE',
             link: function(scope, element, attrs) {
-                var target = element.parent().find('slideable')[0];
+                var target = element.parent()[0].querySelector('[slider]');
                 attrs.expanded = false;
                 element.bind('click', function() {
                     var content = target.querySelector('.slideable_content');
@@ -22,13 +22,12 @@ angular.module('app', [])
             }
         }
     })
-    .directive('slideable', function () {
+    .directive('slider', function () {
         return {
-            restrict:'AE',
+            restrict:'A',
             compile: function (element, attr) {
                 // wrap tag
                 var contents = element.html();
-                element.css({display: 'block'});
                 element.html('<div class="slideable_content" style="margin:0 !important; padding:0 !important" >' + contents + '</div>');
 
                 return function postLink(scope, element, attrs) {
