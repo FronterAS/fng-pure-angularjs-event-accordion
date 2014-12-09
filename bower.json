@@ -1,0 +1,25 @@
+{
+    "name": "fng-pure-angularjs-accordion",
+    "version": "0.0.1",
+    "main": "fng-pure-angularjs-accordion.js",
+
+    "moduleType": [
+        "node"
+    ],
+    "keywords": [
+        "angular.js",
+        "accordion"
+    ],
+    "authors": [
+        "Fronter"
+    ],
+    "license": "MIT",
+    "homepage": "http://fronter.com",
+    "private": true,
+    "ignore": [
+        "**/.*",
+        "index.html",
+        "README.*"
+    ],
+    "dependencies": {}
+}
