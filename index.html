@@ -5,23 +5,52 @@
     <meta charset="UTF-8">
     <title>example</title>
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.6/angular.min.js"></script>
-    <script src="fng-pure-angularjs-accordion.js"></script>
+    <script src="fng-pure-angularjs-event-accordion.js"></script>
     <script>
-        angular.module('app', ['fng.pure.angularjs.accordion']);
+        angular.module('app', ['fng.pure.angularjs.event.accordion'])
+                .controller('exampleController', function($scope) {
+                    $scope.toggleSlider = function () {
+                        $scope.$broadcast('toggle-slider');
+                    };
+                });
     </script>
+    <style>[ng-click] { cursor:pointer; }</style>
 </head>
 
 <body ng-app="app">
-<style>
-    [slider-toggle] { cursor:pointer; }
-</style>
-<article>
-    <h1 slider-toggle>Click here for Hipster Ipsum.</h1>
-    <div slider>
-        <p>Bacon ipsum dolor amet spare ribs ham hock prosciutto short loin pig pork belly jerky. Bacon chuck sausage fatback, pastrami cow capicola pork loin. Shankle pastrami jerky bresaola. Filet mignon alcatra beef ribs doner t-bone, turducken drumstick landjaeger beef pastrami turkey pig. Turkey salami meatloaf tongue jerky short ribs porchetta tenderloin capicola andouille shank landjaeger ball tip.</p>
-        <p>Filet mignon strip steak cupim capicola, corned beef prosciutto pig ribeye sausage beef ribs. Tenderloin flank bresaola short ribs sirloin frankfurter salami cow shoulder cupim landjaeger. Venison tail short ribs frankfurter fatback prosciutto turkey chuck bacon biltong leberkas chicken. Jerky tri-tip pig pork loin pork chop, swine chicken leberkas landjaeger capicola cupim sirloin pastrami. Frankfurter short loin beef, drumstick tenderloin chicken tongue shoulder.</p>
-        <p>Jerky tongue flank sirloin short loin. Pig pork loin jerky kevin flank capicola, porchetta filet mignon chicken fatback pork chop bacon. Pork belly spare ribs venison fatback chicken ball tip ground round t-bone pork loin andouille hamburger short loin meatball doner capicola. Beef meatball leberkas boudin, chicken kevin hamburger cow.</p>
-        <p>Based on <a href="https://github.com/EricWVGG/AngularSlideables">github.com/EricWVGG/AngularSlideables</a></p>
+<article ng-controller="exampleController">
+    <div>
+        <div>
+            <h1 ng-click="toggleSlider()">Click here for Hipster Ipsum.</h1>
+        </div>
+    </div>
+    <div>
+        <div>
+            <div slider>
+                <p>Bacon ipsum dolor amet spare ribs ham hock prosciutto short loin pig pork belly jerky. Bacon chuck sausage fatback, pastrami cow capicola pork loin. Shankle pastrami jerky bresaola. Filet mignon alcatra beef ribs doner t-bone, turducken drumstick landjaeger beef pastrami turkey pig. Turkey salami meatloaf tongue jerky short ribs porchetta tenderloin capicola andouille shank landjaeger ball tip.</p>
+                <p>Filet mignon strip steak cupim capicola, corned beef prosciutto pig ribeye sausage beef ribs. Tenderloin flank bresaola short ribs sirloin frankfurter salami cow shoulder cupim landjaeger. Venison tail short ribs frankfurter fatback prosciutto turkey chuck bacon biltong leberkas chicken. Jerky tri-tip pig pork loin pork chop, swine chicken leberkas landjaeger capicola cupim sirloin pastrami. Frankfurter short loin beef, drumstick tenderloin chicken tongue shoulder.</p>
+                <p>Jerky tongue flank sirloin short loin. Pig pork loin jerky kevin flank capicola, porchetta filet mignon chicken fatback pork chop bacon. Pork belly spare ribs venison fatback chicken ball tip ground round t-bone pork loin andouille hamburger short loin meatball doner capicola. Beef meatball leberkas boudin, chicken kevin hamburger cow.</p>
+                <p>Based on <a href="https://github.com/EricWVGG/AngularSlideables">github.com/EricWVGG/AngularSlideables</a></p>
+            </div>
+        </div>
+    </div>
+    <p>Your fresh artisinal Ipsum will appear above this paragraph. </p>
+</article>
+<article ng-controller="exampleController">
+    <div>
+        <div>
+            <h1 ng-click="toggleSlider()">Click here for Hipster Ipsum.</h1>
+        </div>
+    </div>
+    <div>
+        <div>
+            <div slider>
+                <p>Bacon ipsum dolor amet spare ribs ham hock prosciutto short loin pig pork belly jerky. Bacon chuck sausage fatback, pastrami cow capicola pork loin. Shankle pastrami jerky bresaola. Filet mignon alcatra beef ribs doner t-bone, turducken drumstick landjaeger beef pastrami turkey pig. Turkey salami meatloaf tongue jerky short ribs porchetta tenderloin capicola andouille shank landjaeger ball tip.</p>
+                <p>Filet mignon strip steak cupim capicola, corned beef prosciutto pig ribeye sausage beef ribs. Tenderloin flank bresaola short ribs sirloin frankfurter salami cow shoulder cupim landjaeger. Venison tail short ribs frankfurter fatback prosciutto turkey chuck bacon biltong leberkas chicken. Jerky tri-tip pig pork loin pork chop, swine chicken leberkas landjaeger capicola cupim sirloin pastrami. Frankfurter short loin beef, drumstick tenderloin chicken tongue shoulder.</p>
+                <p>Jerky tongue flank sirloin short loin. Pig pork loin jerky kevin flank capicola, porchetta filet mignon chicken fatback pork chop bacon. Pork belly spare ribs venison fatback chicken ball tip ground round t-bone pork loin andouille hamburger short loin meatball doner capicola. Beef meatball leberkas boudin, chicken kevin hamburger cow.</p>
+                <p>Based on <a href="https://github.com/EricWVGG/AngularSlideables">github.com/EricWVGG/AngularSlideables</a></p>
+            </div>
+        </div>
     </div>
     <p>Your fresh artisinal Ipsum will appear above this paragraph. </p>
 </article>
