@@ -1,6 +1,6 @@
 {
     "name": "fng-pure-angularjs-event-accordion",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "main": "fng-pure-angularjs-event-accordion.js",
 
     "moduleType": [
